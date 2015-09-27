@@ -12,13 +12,18 @@ module GameInfo
 
   end
 
+  def all_cards
+    my_cards + table_cards
+  end
+
+  # return array of kinds
   def table_cards
     @game_state["community_cards"].map{|c| c['rank'] }
   end
 
   # returns 'AA' or '66' or '65' or '72'
   def my_cards
-    me["hole_cards"].map {|card| card["rank"] }.join
+    me["hole_cards"].map {|card| card["rank"] }
   end
 
   def me

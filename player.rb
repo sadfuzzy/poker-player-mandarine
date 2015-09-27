@@ -17,6 +17,7 @@ class Player
     puts "pair?: #{pair_in_hand?}"
     puts "me : #{me.inspect}"
     puts "table_cards : #{table_cards}"
+    puts "all_cards: #{all_cards}"
     #puts my_cards.inspect
     if pair_in_hand?
       1000
