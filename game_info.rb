@@ -22,7 +22,7 @@ module GameInfo
   end
 
   def current_bet
-    @game_info["current_buy_in"]
+    @game_state["current_buy_in"]
   end
 
   def very_good?
