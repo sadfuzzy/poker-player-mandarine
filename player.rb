@@ -9,12 +9,19 @@ class Player
       
     #puts game_state["players"].inspect
     #puts game_state["community_cards"].inspect
-    puts game_state
-    puts me.inspect
+    puts "game: #{game_state}"
+    puts "my cards: #{my_cards.inspect}"
+    puts "pair?: #{pair_in_hand?}"
+    puts "me : #{me.inspect}"
     #puts my_cards.inspect
     0
-    #puts "MY CARDS: #{str_cards}bet: #{bet}"
     #bet
+  rescue
+    0
+  end
+
+  def pair_in_hand?
+    my_cards[0] == my_cards[1]
   end
 
   def showdown(game_state)
@@ -31,6 +38,6 @@ class Player
   end
 
   def me
-    @game_state["players"].select{|p| p["name"] == "Mandarine"}
+    @game_state["players"].select{|p| p["name"] == "Mandarine"}[0]
   end
 end
