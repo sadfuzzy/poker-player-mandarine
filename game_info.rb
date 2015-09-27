@@ -10,14 +10,31 @@ module GameInfo
       else
         current_bet*2
       end
+    elsif good_cards?
+      very_good? ? stack : (current_bet < 500 ? 333 : 0)
     else
-
       current_bet < 100 ? current_bet : 0
     end
   end
 
+  def stack
+    me["stack"]
+  end
+
   def current_bet
     @game_info["current_buy_in"]
+  end
+
+  def very_good?
+    my_cards.include?("A") || 
+    my_cards.include?("K")
+  end
+
+  def good_cards?
+    my_cards.include?("A") || 
+    my_cards.include?("K") ||
+    my_cards.include?("Q") ||
+    my_cards.include?("T")
   end
 
   def opponents
