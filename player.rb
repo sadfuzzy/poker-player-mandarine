@@ -11,7 +11,7 @@ class Player
     #puts game_state["community_cards"].inspect
     puts me.inspect
     #puts my_cards.inspect
-    rand(40)
+    0
     #puts "MY CARDS: #{str_cards}bet: #{bet}"
     #bet
   end
