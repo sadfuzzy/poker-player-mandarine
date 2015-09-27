@@ -1,5 +1,4 @@
 require './game_info'
-require 'json'
 
 class Player
   include GameInfo
@@ -28,15 +27,11 @@ class Player
   rescue
     0
 
-    # 1000 if has_pair? (game_state)
+    1000 if has_pair?(game_state)
   end
 
 
   def showdown(game_state)
-  end
-
-  def to_data(game_state)
-    JSON.parse(game_state)
   end
 
   def community_cards(data)
@@ -57,9 +52,8 @@ class Player
   end
 
   def has_pair?(game_state)
-    data = to_data(game_state)
-    if data
-      all_cards = community_cards(data) + my_cards(data)
+    if game_state
+      all_cards = community_cards(game_state) + my_cards(game_state)
 
       detect_pair(all_cards) if all_cards.size > 0
     end
