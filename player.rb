@@ -29,10 +29,12 @@ class Player
     #puts my_cards.inspect
     if pair_in_hand?
       1000
-    #elsif good_cards?
-      #500
+    elsif my_cards.include? "A"
+      1000
+    elsif my_cards.include? "K"
+      333
     else
-      300
+      50
     end
     #bet
   rescue
