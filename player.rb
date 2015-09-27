@@ -10,8 +10,13 @@ class Player
     #puts game_state["players"].inspect
     #puts game_state["community_cards"].inspect
     
-    puts me.inspect
-    rand(506) + 100
+    bet = if str_cards[0] == str_cards[1]
+      rand(333)+300
+    else
+      rand(33)
+    end
+    puts "MY CARDS: #{str_cards}bet: #{bet}"
+    bet
   end
 
   def showdown(game_state)
@@ -20,6 +25,10 @@ class Player
 
   def opponents
     # 
+  end
+
+  def str_cards
+    me["hole_cards"].map {|card| card["rank"] }.join
   end
 
   def me
