@@ -1,7 +1,7 @@
 module GameInfo
 
   def select_bet
-    pair_height = all_cards.detect{ |card| ranks.count(card) >= 2 }
+    pair_height = all_cards.detect{ |card| all_cards.count(card) >= 2 }
 
     if pair_height && %w(A K Q J T).include?(pair_height)
       if current_bet < 500
@@ -13,10 +13,6 @@ module GameInfo
       current_bet < 100 ? current_bet : 0
     end
   end
-  #
-  # def bid(num)
-  #   detect_bids
-  # end
 
   def current_bet
     @game_info["current_buy_in"]
