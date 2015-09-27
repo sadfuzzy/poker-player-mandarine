@@ -12,6 +12,10 @@ module GameInfo
 
   end
 
+  def table_cards
+    @game_state["community_cards"].map{|c| c['rank'] }
+  end
+
   # returns 'AA' or '66' or '65' or '72'
   def my_cards
     me["hole_cards"].map {|card| card["rank"] }.join
