@@ -1,7 +1,7 @@
 module GameInfo
 
   def pair_in_hand?
-    my_cards[0]['rank'] == my_cards[1]['rank']
+    my_cards[0] == my_cards[1]
   end
 
   def opponents
