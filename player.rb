@@ -42,7 +42,7 @@ class Player
     data['players'].select{|e| e['name'] == PLAYER_NAME}
   end
 
-  def my_cards(data)
+  def my_cards_second(data)
     player_data(data)['hole_cards']
   end
 
