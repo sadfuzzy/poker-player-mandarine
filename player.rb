@@ -15,20 +15,7 @@ class Player
   PLAYER_NAME = 'Mandarine'
 
   def bet_request(game_state)
-    # hard c
-    @game_state = game_state
-
-    #puts game_state["players"].inspect
-    #puts game_state["community_cards"].inspect
-    puts "game: #{game_state}"
-    puts "my cards: #{my_cards.inspect}"
-    #puts "pair?: #{pair_in_hand?}"
-    puts "me : #{me.inspect}"
-    puts "table_cards : #{table_cards}"
-    puts "all_cards: #{all_cards}"
-    #puts my_cards.inspect
-
-    select_bet
+    100
   end
 
   def showdown(game_state)
