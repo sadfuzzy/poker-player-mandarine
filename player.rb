@@ -2,7 +2,7 @@ require './game_info'
 
 class Player
   include GameInfo
-  VERSION = "All in strategy v343"
+  VERSION = "With table pairs"
   PLAYER_NAME = 'Mandarine'
 
   def bet_request(game_state)
@@ -11,8 +11,7 @@ class Player
     bet_size = select_bet
 
     puts "bet #{bet_size} # with: #{my_cards} table: #{table_cards}"
-    #bet_size
-    500
+    bet_size
   end
 
   def showdown(game_state)

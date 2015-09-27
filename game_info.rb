@@ -2,16 +2,27 @@ module GameInfo
   HIGH = %w(A K Q J)
 
   def select_bet
-    if my_cards_include('A') ||
-      my_cards_include('K') ||
-      my_cards_include('Q') ||
-      my_cards_include('J') ||
-      my_cards.uniq.size == 1
-      500
+    if good_cards? ||
+      we_have_pair ||
+      we_have_pair_with_table
+
+      bet_with_current 500
+
     else
-      100
+
+      50
+      
     end
   end #.smfhgl
+
+  def we_have_pair
+    my_cards.uniq.size == 1
+  end
+
+  def we_have_pair_with_table
+    table_pairs = table_cards.select{|c| table_cards.count(c) >= 2}.uniq
+    (my_cards - table_pair) < my_cards.size
+  end
 
   def my_cards_include(card)
     my_cards.find {|c| c == card}
