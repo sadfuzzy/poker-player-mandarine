@@ -33,6 +33,10 @@ class Player
       1000
     elsif my_cards.include? "K"
       333
+    elsif my_cards.include? "Q"
+      333
+    elsif my_cards.include? "J"
+      333
     else
       50
     end

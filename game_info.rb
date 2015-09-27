@@ -8,8 +8,12 @@ module GameInfo
     #
   end
 
-  def good_cards? 
-    all_cards
+  def ready_push?
+    
+  end
+
+  def good_cards?
+    #my_cards.include?
     rand(5) == 3
   end
 
