@@ -9,7 +9,7 @@ module GameInfo
   end
 
   def ready_push?
-    
+     
   end
 
   def good_cards?
@@ -19,7 +19,7 @@ module GameInfo
 
   def have_set?
     all_cards
-  endk
+  end
 
   def card
 
