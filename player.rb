@@ -22,7 +22,7 @@ class Player
     #puts game_state["community_cards"].inspect
     puts "game: #{game_state}"
     puts "my cards: #{my_cards.inspect}"
-    puts "pair?: #{pair_in_hand?}"
+    #puts "pair?: #{pair_in_hand?}"
     puts "me : #{me.inspect}"
     puts "table_cards : #{table_cards}"
     puts "all_cards: #{all_cards}"
