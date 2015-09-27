@@ -10,7 +10,8 @@ class Player
     #puts game_state["players"].inspect
     #puts game_state["community_cards"].inspect
     puts me.inspect
-    rand(33)
+    puts my_cards.inspect
+    rand(40)
     #puts "MY CARDS: #{str_cards}bet: #{bet}"
     #bet
   end
@@ -23,7 +24,8 @@ class Player
     # 
   end
 
-  def str_cards
+  # returns 'AA' or '66' or '65' or '72'
+  def my_cards
     me["hole_cards"].map {|card| card["rank"] }.join
   end
 
