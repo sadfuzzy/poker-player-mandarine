@@ -9,7 +9,7 @@ class Player
       
     #puts game_state["players"].inspect
     #puts game_state["community_cards"].inspect
-    
+    puts me.inspect
     rand(33)
     #puts "MY CARDS: #{str_cards}bet: #{bet}"
     #bet
