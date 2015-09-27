@@ -11,7 +11,7 @@ module GameInfo
     else
 
       50
-      
+
     end
   end #.smfhgl
 
@@ -21,11 +21,7 @@ module GameInfo
 
   def we_have_pair_with_table
     table_pairs = table_cards.select{|c| table_cards.count(c) >= 2}.uniq
-    (my_cards - table_pair) < my_cards.size
-  end
-
-  def my_cards_include(card)
-    my_cards.find {|c| c == card}
+    (my_cards - table_pairs) < my_cards.size
   end
 
   def bet_with_current(amount)
