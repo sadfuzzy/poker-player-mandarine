@@ -12,6 +12,7 @@ class Player
 
     #puts "bet #{bet} # with: #{my_cards} table: #{table_cards}"
     #bet
+    puts "bet 1000"
     1000
   end
 
