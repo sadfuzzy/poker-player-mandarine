@@ -20,14 +20,14 @@ class Player
     #puts my_cards.inspect
     if pair_in_hand?
       1000
+    elsif good_cards?
+      500
     else
       50
     end
     #bet
   rescue
-    0
-
-    1000 if has_pair?(game_state)
+    1000
   end
 
 
