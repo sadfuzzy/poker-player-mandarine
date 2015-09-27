@@ -2,23 +2,14 @@ module GameInfo
   HIGH = %w(A K Q J)
 
   def select_bet
-    pair_height = all_cards.detect{ |card| all_cards.count(card) >= 2 }
-    have_pair = HIGH.include?(pair_height) && my_cards_include(pair_height)
-    puts "my cards: #{my_cards.inspect}, have-pair #{have_pair} with #{pair_height} and good? #{good_cards?} or very #{very_good?}"
-    if have_pair
-      bet_with_current rand(100)+122
-
-    elsif good_cards? && very_good?
-      bet_with_current rand(233)+122 
-
-    elsif good_cards?
-      bet_with_current rand(133)+42
-
-    elsif current_bet < 100 && rand(5) == 2
-      stack 
-
+    if my_cards_include('A') ||
+      my_cards_include('K') ||
+      my_cards_include('Q') ||
+      my_cards_include('J') ||
+      my_cards.uniq.size == 1
+      500
     else
-      0
+      100
     end
   end #.smfhgl
 
