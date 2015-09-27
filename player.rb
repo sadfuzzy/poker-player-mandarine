@@ -27,19 +27,7 @@ class Player
     puts "table_cards : #{table_cards}"
     puts "all_cards: #{all_cards}"
     #puts my_cards.inspect
-    if pair_in_hand?
-      1000
-    elsif my_cards.include? "A"
-      1000
-    elsif my_cards.include? "K"
-      333
-    elsif my_cards.include? "Q"
-      333
-    elsif my_cards.include? "J"
-      333
-    else
-      50
-    end
+    select_bet
     #bet
   rescue
     1000

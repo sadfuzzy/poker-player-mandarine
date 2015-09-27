@@ -1,15 +1,25 @@
 module GameInfo
 
-  def pair_in_hand?
-    my_cards[0] == my_cards[1]
+  def select_bet
+    pair_height = all_cards.detect{ |card| ranks.count(card) >= 2 }
+
+    if pair_height && %w(A K Q J T).include?(pair_height)
+      500
+    else
+      200
+    end
   end
+  #
+  # def bid(num)
+  #   detect_bids
+  # end
 
   def opponents
     #
   end
 
   def ready_push?
-     
+
   end
 
   def good_cards?
