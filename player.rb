@@ -15,7 +15,7 @@ class Player
   PLAYER_NAME = 'Mandarine'
 
   def bet_request(game_state)
-    100
+    select_bet
   end
 
   def showdown(game_state)
