@@ -4,11 +4,12 @@ module GameInfo
   def select_bet
     pair_height = all_cards.detect{ |card| all_cards.count(card) >= 2 }
     have_pair = HIGH.include?(pair_height) && my_cards_include(pair_height)
+    puts "my cards: #{my_cards.inspect}, have-pair #{have_pair} with #{pair_height} and good? #{good_cards?} or very #{very_good?}"
     if have_pair
       bet_with_current(500)
 
     elsif good_cards? && very_good?
-      bet_with_current(333) 
+      bet_with_current(333)
 
     elsif good_cards?
       bet_with_current 200
