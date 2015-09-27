@@ -7,7 +7,7 @@ module GameInfo
     if pair_height && HIGH.include?(pair_height) && (my_cards - pair_height).size < 2
       if current_bet < 500
         500
-      elsif 
+      elsif
         current_bet
       end
     elsif good_cards?
@@ -42,19 +42,6 @@ module GameInfo
   end
 
   def ready_push?
-
-  end
-
-  def good_cards?
-    #my_cards.include?
-    rand(5) == 3
-  end
-
-  def have_set?
-    all_cards
-  end
-
-  def card
 
   end
 
