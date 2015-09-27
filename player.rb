@@ -28,7 +28,7 @@ class Player
   rescue
     0
 
-    1000 if has_pair?(game_state)
+    # 1000 if has_pair? (game_state)
   end
 
 
