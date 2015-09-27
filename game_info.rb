@@ -19,7 +19,7 @@ module GameInfo
     else
       0
     end
-  end
+  end #.smfhgl
 
   def my_cards_include(card)
     my_cards.find {|c| c == card}
