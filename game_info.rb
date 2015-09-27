@@ -6,16 +6,16 @@ module GameInfo
     have_pair = HIGH.include?(pair_height) && my_cards_include(pair_height)
     puts "my cards: #{my_cards.inspect}, have-pair #{have_pair} with #{pair_height} and good? #{good_cards?} or very #{very_good?}"
     if have_pair
-      bet_with_current(500)
+      bet_with_current rand(100)+122
 
     elsif good_cards? && very_good?
-      bet_with_current(333)
+      bet_with_current rand(233)+122 
 
     elsif good_cards?
-      bet_with_current 200
+      bet_with_current rand(133)+42
 
-    elsif current_bet < 100
-      stack
+    elsif current_bet < 100 && rand(5) == 2
+      stack 
 
     else
       0
