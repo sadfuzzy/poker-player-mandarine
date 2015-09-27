@@ -15,6 +15,7 @@ class Player
   PLAYER_NAME = 'Mandarine'
 
   def bet_request(game_state)
+    @game_state = game_state
     select_bet
   end
 
