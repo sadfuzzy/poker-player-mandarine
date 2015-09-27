@@ -10,13 +10,9 @@ class Player
     #puts game_state["players"].inspect
     #puts game_state["community_cards"].inspect
     
-    bet = if str_cards[0] == str_cards[1]
-      rand(333)+300
-    else
-      rand(33)
-    end
-    puts "MY CARDS: #{str_cards}bet: #{bet}"
-    bet
+    rand(33)
+    #puts "MY CARDS: #{str_cards}bet: #{bet}"
+    #bet
   end
 
   def showdown(game_state)
