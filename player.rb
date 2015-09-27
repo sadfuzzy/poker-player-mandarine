@@ -9,6 +9,7 @@ class Player
       
     #puts game_state["players"].inspect
     #puts game_state["community_cards"].inspect
+    puts game_state
     puts me.inspect
     #puts my_cards.inspect
     0
