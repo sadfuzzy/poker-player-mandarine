@@ -16,7 +16,9 @@ class Player
 
   def bet_request(game_state)
     @game_state = game_state
-    select_bet
+    bet = select_bet
+    puts "bet #{bet} # with: #{my_cards} table: #{table_cards}"
+    bet
   end
 
   def showdown(game_state)
