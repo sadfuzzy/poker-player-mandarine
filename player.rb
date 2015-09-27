@@ -6,7 +6,7 @@ class Player
   PLAYER_NAME = 'Mandarine'
 
   def bet_request(game_state)
-    puts "START bet_request::"
+    puts "START bet_request:: || ::"
     @game_state = game_state
     bet_size = select_bet
 
