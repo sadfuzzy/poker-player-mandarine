@@ -2,7 +2,7 @@ require './game_info'
 
 class Player
   include GameInfo
-  VERSION = "All in strategy"
+  VERSION = "All in strategy v33"
   PLAYER_NAME = 'Mandarine'
 
   def bet_request(game_state)
