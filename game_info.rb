@@ -8,9 +8,14 @@ module GameInfo
     #
   end
 
-  def good_cards?
+  def good_cards? 
+    all_cards
     rand(5) == 3
   end
+
+  def have_set?
+    all_cards
+  endk
 
   def card
 
