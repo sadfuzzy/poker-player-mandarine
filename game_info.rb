@@ -34,7 +34,7 @@ module GameInfo
     my_cards.include?("A") || 
     my_cards.include?("K") ||
     my_cards.include?("Q") ||
-    my_cards.include?("T")
+    my_cards.include?("J")
   end
 
   def opponents
