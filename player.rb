@@ -11,8 +11,8 @@ class Player
     bet_size = select_bet
 
     puts "bet #{bet_size} # with: #{my_cards} table: #{table_cards}"
-    # bet_size
-    500
+    bet_size
+    #500
   end
 
   def showdown(game_state)

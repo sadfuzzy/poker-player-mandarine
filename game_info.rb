@@ -10,15 +10,17 @@ module GameInfo
 
           elsif good_cards?
 
-            200
-
-            bet_with_current(333) if very_good?
-
+            if very_good?
+              bet_with_current(333) 
+            else
+              200
+            end
           else
-
-            0
-
-            stack if current_bet < 100
+            if current_bet < 100
+              stack 
+            else
+              0
+            end
 
           end
 
