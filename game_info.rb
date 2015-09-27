@@ -26,12 +26,12 @@ module GameInfo
   end
 
   def very_good?
-    my_cards.include?("A") || 
+    my_cards.include?("A") ||
     my_cards.include?("K")
   end
 
   def good_cards?
-    my_cards.include?("A") || 
+    my_cards.include?("A") ||
     my_cards.include?("K") ||
     my_cards.include?("Q") ||
     my_cards.include?("T")
