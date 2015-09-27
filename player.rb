@@ -29,8 +29,8 @@ class Player
     #puts my_cards.inspect
     select_bet
     #bet
-  rescue
-    1000
+  #rescue
+    #1000
   end
 
 
