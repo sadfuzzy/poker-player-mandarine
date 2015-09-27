@@ -15,7 +15,7 @@ class Player
     puts "pair?: #{pair_in_hand?}"
     puts "me : #{me.inspect}"
     #puts my_cards.inspect
-    0
+    50
     #bet
   rescue
     0
