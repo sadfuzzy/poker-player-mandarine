@@ -1,6 +1,7 @@
+require './game_info'
 
 class Player
-
+  include GameInfo
   VERSION = "Default Ruby folding player"
 
   def bet_request(game_state)
@@ -20,24 +21,9 @@ class Player
     0
   end
 
-  def pair_in_hand?
-    my_cards[0] == my_cards[1]
-  end
 
   def showdown(game_state)
 
   end
 
-  def opponents
-    # 
-  end
-
-  # returns 'AA' or '66' or '65' or '72'
-  def my_cards
-    me["hole_cards"].map {|card| card["rank"] }.join
-  end
-
-  def me
-    @game_state["players"].select{|p| p["name"] == "Mandarine"}[0]
-  end
 end
