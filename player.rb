@@ -7,6 +7,9 @@ class Player
     puts "# ---"
     puts game_state["players"].inspect
     puts game_state["community_cards"].inspect
+    puts "# ==="
+    me = game_state["players"].select{|p| p["name"] == "Mandarine"}
+    puts me.inspect
     rand(333)
   end
 
