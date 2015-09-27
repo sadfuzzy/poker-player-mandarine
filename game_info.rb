@@ -37,14 +37,6 @@ module GameInfo
     my_cards.include?("J")
   end
 
-  def opponents
-    #
-  end
-
-  def ready_push?
-
-  end
-
   def all_cards
     my_cards + table_cards
   end
