@@ -1,15 +1,17 @@
 module GameInfo
+  HIGH = %w(A K Q J T)
 
   def select_bet
     pair_height = all_cards.detect{ |card| all_cards.count(card) >= 2 }
 
-    if pair_height && %w(A K Q J T).include?(pair_height)
+    if pair_height && HIGH.include?(pair_height) && (my_cards - pair_height).size < 2
       if current_bet < 500
         500
       else
         current_bet*2
       end
     else
+
       current_bet < 100 ? current_bet : 0
     end
   end
