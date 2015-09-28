@@ -21,7 +21,7 @@ module GameInfo
 
   def we_have_pair_with_table
     table_pairs = table_cards.select{|c| table_cards.count(c) >= 2}.uniq
-    (my_cards - table_pairs) < my_cards.size
+    (my_cards - table_pairs).size < my_cards.size
   end
 
   def bet_with_current(amount)
