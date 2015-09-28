@@ -12,8 +12,10 @@ class Player
 
     puts "bet #{bet_size} # with: #{my_cards} table: #{table_cards}"
     bet_size
+
   end
 
   def showdown(game_state)
+    # Спасибо парни, с вами было очень интересно "поработать"!
   end
 end
